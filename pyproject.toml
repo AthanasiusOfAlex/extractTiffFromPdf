@@ -1,0 +1,16 @@
+[project]
+name = "extract-tiff-from-pdf"
+version = "0.1.0"
+description = "Extract TIFF images from PDF files"
+requires-python = ">=3.8"
+dependencies = [
+    "pypdf",
+    "pdf2image",
+]
+
+[project.scripts]
+extractTiffFromPdf = "extract_tiff_from_pdf.main:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
