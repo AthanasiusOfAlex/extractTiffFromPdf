@@ -84,13 +84,14 @@ def _convert_page_to_image(
         raw_pdf_bytes,
         dpi=resolution,
         first_page=page_number + 1,
-        last_page=page_number + 1
+        last_page=page_number + 1,
+        grayscale=True,
     )
     image = images[0]
 
     # Save the image with sequential numbering
     image_path = os.path.join(output_directory, f"page_{page_number+1:04}.tiff")
-    image.save(image_path, "TIFF")
+    image.save(image_path, "TIFF", dpi=(resolution, resolution))
     print(f"Saved page {page_number+1} as {image_path}")
 
 def _parse_arguments() -> argparse.Namespace:
