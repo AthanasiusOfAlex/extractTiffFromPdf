@@ -1,4 +1,4 @@
+.DS_Store
 **/__pycache__/*
 testing/*
-.DS_Store
 src/extract_tiff_from_pdf.egg-info/
